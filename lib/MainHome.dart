@@ -24,8 +24,6 @@ class _HazratKhadijeState extends State<HazratKhadije> {
       Delneveshte(),
       Container(),
     ];
-
-
     return Scaffold(
       backgroundColor: Colors.white,
       body:
@@ -55,15 +53,15 @@ class _HazratKhadijeState extends State<HazratKhadije> {
                 items: [
                   BottomNavigationBarItem(
                       icon: Icon(Icons.home_filled),
-                      label: "Home"
+                      label: "صفحه اصلی"
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.favorite),
-                    label: "delneveshte",
+                    label: "دل نوشته",
                   ),
                   BottomNavigationBarItem(
                       icon: Icon(Icons.search),
-                      label: "search"
+                      label: "جستجو"
                   ),
                 ],
               ),
