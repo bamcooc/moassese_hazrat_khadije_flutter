@@ -22,13 +22,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return
-      RefreshIndicator(
-        onRefresh: () async => Future.delayed(Duration(seconds: 3)),
-          child:
-      //         Container(
-      //             height: MediaQuery.of(context).size.height,
-      //             width: MediaQuery.of(context).size.width,
-      //             child:
+      // RefreshIndicator(
+      //   onRefresh: () async => Future.delayed(Duration(seconds: 3)),
+      //     child:
+      Stack(
+        children: <Widget>[
       WebView(
         key: UniqueKey(),
         initialUrl: 'https://khadije.com/fa',
@@ -36,12 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
         onWebViewCreated: (WebViewController webViewController) {
           _conttroller = webViewController;
         },
-        onPageFinished: (String str) {
-          myModel.stopLoading();
-        },
-        onPageStarted: (String str) {
-          myModel.startLoading();
-        },
+        // onPageFinished: (String str) {
+        //   myModel.stopLoading();
+        // },
+        // onPageStarted: (String str) {
+        //   myModel.startLoading();
+        // },
         gestureRecognizers: Set()
           ..add(Factory<VerticalDragGestureRecognizer>(
                   () => VerticalDragGestureRecognizer()
@@ -54,9 +52,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     }
                   });
                 })),
-    // )
-      )
-      ) ;
+        onPageFinished: (finish) {
+          setState(() {
+            myModel.stopLoading();
+            isLoading = false;
+          });
+        },
+      ),
+        isLoading ? Center( child: CircularProgressIndicator(),)
+            : Stack(),
+     ] );
   }
 }
 
