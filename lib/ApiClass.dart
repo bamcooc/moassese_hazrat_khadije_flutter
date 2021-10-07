@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hazrat_khadije/product.dart';
 import 'package:http/http.dart' as http;
 
+
 class ApiClass extends StatefulWidget {
   const ApiClass({Key? key}) : super(key: key);
 
@@ -120,7 +121,7 @@ class _ApiClassState extends State<ApiClass> {
                   color: Colors.black45,
                   fontSize: 15,
                 ),
-              )
+              ),
             ],
           ),
         ),
