@@ -1,117 +1,131 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:hazrat_khadije/File.dart';
 import 'package:hazrat_khadije/meta.dart';
 
+
 class Product{
-  int _id;
-  String _language;
-  var _subdomain;
-  String _title;
-  var _seotitle;
-  String _slug;
-  String _slug_raw;
-  List _parent_url;
-  String _url;
-  String _link;
-  String _content;
-  Meta _meta;
-  File _file;
-  String _type;
-  String _subtype;
-  String _special;
-  StreamBuilder _comment;
-  var _count;
-  var _order;
-  String _status;
-  var _parent;
-  String _user_id;
-  String _publishdate;
-  String _datemodified;
-  String _datecreated;
-  var _subtitle;
-  String _excerpt;
+  int id;
+  String language;
+  var subdomain;
+  String title;
+  var seotitle;
+  String slug;
+  String slug_raw;
+  List parent_url;
+  String url;
+  String link;
+  String content;
+  Meta meta;
+  File file;
+  String type;
+  String subtype;
+  String special;
+  StreamBuilder comment;
+  var count;
+  var order;
+  String status;
+  var parent;
+  String user_id;
+  String publishdate;
+  String datemodified;
+  String datecreated;
+  var subtitle;
+  String excerpt;
 
 
-  Product(
-      this._id,
-      this._language,
-      this._subdomain,
-      this._title,
-      this._seotitle,
-      this._slug,
-      this._slug_raw,
-      this._parent_url,
-      this._url,
-      this._link,
-      this._content,
-      this._meta,
-      this._file,
-      this._type,
-      this._subtype,
-      this._special,
-      this._comment,
-      this._count,
-      this._order,
-      this._status,
-      this._parent,
-      this._user_id,
-      this._publishdate,
-      this._datemodified,
-      this._datecreated,
-      this._subtitle,
-      this._excerpt);
+  Product({
+      required this.id,
+      required this.language,
+      this.subdomain,
+      required this.title,
+      this.seotitle,
+      required this.slug,
+      required this.slug_raw,
+      required this.parent_url,
+      required this.url,
+      required this.link,
+      required this.content,
+      required this.meta,
+      required this.file,
+      required this.type,
+      required this.subtype,
+      required this.special,
+      required this.comment,
+      this.count,
+      this.order,
+      required this.status,
+      this.parent,
+      required this.user_id,
+      required this.publishdate,
+      required this.datemodified,
+      required this.datecreated,
+      this.subtitle,
+      required this.excerpt});
 
-  String get content => _content;
 
-  String get link => _link;
+  factory Product.fromJson(Map<String, dynamic> data){
+    return Product(
+        id: data["id"],
+        language: data["language"],
+        subdomain: data["subdomain"],
+        title: data["title"],
+        seotitle: data["seotitle"],
+        slug: data["slug"],
+        slug_raw: data["slug_raw"],
+        parent_url: data["parent_url"],
+        url: data["url"],
+        link: data["link"],
+        content: data["content"],
+        meta: Meta.fromJson(data["meta"]),
+        file: File.fromJson(data["file"]),
+        type: data["type"],
+        subtype: data["subtype"],
+        special: data["special"],
+        comment: data["comment"],
+        count: data["count"],
+        order: data["order"],
+        status: data["status"],
+        parent: data["parent"],
+        user_id: data["user_id"],
+        publishdate: data["publishdate"],
+        datemodified: data["datemodified"],
+        datecreated: data["datecreated"],
+        subtitle: data["subtitle"],
+        excerpt: data["excerpt"],
+    );
+  }
 
-  String get url => _url;
+  Map<String, dynamic> toJson(){
+    return {
+      "id" : id,
+      "language" : language,
+      "subdomain" : subdomain,
+      "title" : title,
+      "seotitle" : seotitle,
+      "slug" : slug,
+      "slug_raw" : slug_raw,
+      "parent_url" : parent_url,
+      "url" : url,
+      "link" : link,
+      "content" : content,
+      "meta" : meta.toJson(),
+      "file" : file.toJson(),
+      "type" : type,
+      "subtype" : subtype,
+      "special" : special,
+      "comment" : comment,
+      "count" : count,
+      "order" : order,
+      "status" : status,
+      "parent" : parent,
+      "user_id" : user_id,
+      "publishdate" : publishdate,
+      "datemodified" : datemodified,
+      "datecreated" : datecreated,
+      "subtitle" : subtitle,
+      "excerpt" : excerpt,
 
-  List get parent_url => _parent_url;
-
-  String get slug_raw => _slug_raw;
-
-  String get slug => _slug;
-
-  get seotitle => _seotitle;
-
-  String get title => _title;
-
-  get subdomain => _subdomain;
-
-  String get language => _language;
-
-  int get id => _id;
-
-  String get excerpt => _excerpt;
-
-  get subtitle => _subtitle;
-
-  String get datecreated => _datecreated;
-
-  String get datemodified => _datemodified;
-
-  String get publishdate => _publishdate;
-
-  String get user_id => _user_id;
-
-  get parent => _parent;
-
-  String get status => _status;
-
-  get order => _order;
-
-  get count => _count;
-
-  StreamBuilder get comment => _comment;
-
-  String get special => _special;
-
-  String get subtype => _subtype;
-
-  String get type => _type;
-
-  File get file => _file;
-
-  Meta get meta => _meta;
+    }
+  }
 }
