@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'ApiClass.dart';
 import 'HomePage.dart';
 import 'delneveshte.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -22,7 +23,7 @@ class _HazratKhadijeState extends State<HazratKhadije> {
     final List<Widget> _tabList =[
       HomeScreen(),
       Delneveshte(),
-      Container(),
+      ApiClass(),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
