@@ -1,13 +1,15 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hazrat_khadije/Download.dart';
+import 'package:hazrat_khadije/Source.dart';
 
-class meta{
-  Widget _download;
-  Widget _source;
+class Meta{
+  Download _download;
+  Source _source;
   var _redirect;
   String _thumb;
   List _gallery;
 
-  meta(
+  Meta(
       this._download, this._source, this._redirect, this._thumb, this._gallery);
 
   List get gallery => _gallery;
@@ -16,7 +18,7 @@ class meta{
 
   get redirect => _redirect;
 
-  Widget get source => _source;
+  Source get source => _source;
 
-  Widget get download => _download;
+  Download get download => _download;
 }

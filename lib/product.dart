@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hazrat_khadije/File.dart';
+import 'package:hazrat_khadije/meta.dart';
 
 class Product{
   int _id;
@@ -12,8 +14,8 @@ class Product{
   String _url;
   String _link;
   String _content;
-  Widget _meta;
-  Widget _file;
+  Meta _meta;
+  File _file;
   String _type;
   String _subtype;
   String _special;
@@ -109,7 +111,7 @@ class Product{
 
   String get type => _type;
 
-  Widget get file => _file;
+  File get file => _file;
 
-  Widget get meta => _meta;
+  Meta get meta => _meta;
 }
