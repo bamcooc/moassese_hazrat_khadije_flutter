@@ -7,9 +7,9 @@ import 'package:hazrat_khadije/meta.dart';
 class Product{
   int id;
   String language;
-  var subdomain;
+  String subdomain;
   String title;
-  var seotitle;
+  String seotitle;
   String slug;
   String slug_raw;
   List parent_url;
@@ -22,46 +22,46 @@ class Product{
   String subtype;
   String special;
   StreamBuilder comment;
-  var count;
-  var order;
+  String count;
+  String order;
   String status;
-  var parent;
+  String parent;
   String user_id;
   String publishdate;
   String datemodified;
   String datecreated;
-  var subtitle;
+  String subtitle;
   String excerpt;
 
 
   Product({
-      required this.id,
-      required this.language,
+      this.id,
+      this.language,
       this.subdomain,
-      required this.title,
+      this.title,
       this.seotitle,
-      required this.slug,
-      required this.slug_raw,
-      required this.parent_url,
-      required this.url,
-      required this.link,
-      required this.content,
-      required this.meta,
-      required this.file,
-      required this.type,
-      required this.subtype,
-      required this.special,
-      required this.comment,
+      this.slug,
+      this.slug_raw,
+      this.parent_url,
+      this.url,
+      this.link,
+      this.content,
+      this.meta,
+      this.file,
+      this.type,
+      this.subtype,
+      this.special,
+      this.comment,
       this.count,
       this.order,
-      required this.status,
+      this.status,
       this.parent,
-      required this.user_id,
-      required this.publishdate,
-      required this.datemodified,
-      required this.datecreated,
+      this.user_id,
+      this.publishdate,
+      this.datemodified,
+      this.datecreated,
       this.subtitle,
-      required this.excerpt});
+      this.excerpt});
 
 
   factory Product.fromJson(Map<String, dynamic> data){
@@ -125,7 +125,6 @@ class Product{
       "datecreated" : datecreated,
       "subtitle" : subtitle,
       "excerpt" : excerpt,
-
-    }
+    };
   }
 }
