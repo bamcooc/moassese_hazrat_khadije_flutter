@@ -5,17 +5,17 @@ import 'ApiClass.dart';
 import 'HomePage.dart';
 import 'delneveshte.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:hazrat_khadije/ApiScreen.dart';
 
 class HazratKhadije extends StatefulWidget {
-  const HazratKhadije({Key? key}) : super(key: key);
+  const HazratKhadije({Key key}) : super(key: key);
 
   @override
   _HazratKhadijeState createState() => _HazratKhadijeState();
 }
 
 class _HazratKhadijeState extends State<HazratKhadije> {
-  late WebViewController conttroller;
+   WebViewController conttroller;
   int _pageIndex=0;
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,8 @@ class _HazratKhadijeState extends State<HazratKhadije> {
     final List<Widget> _tabList =[
       HomeScreen(),
       Delneveshte(),
-      ApiClass(),
+      // ApiClass(),
+      ApiScreen(),
     ];
     return Scaffold(
       backgroundColor: Colors.white,

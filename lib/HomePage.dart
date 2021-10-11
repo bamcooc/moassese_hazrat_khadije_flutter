@@ -6,14 +6,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late WebViewController _conttroller;
+   WebViewController _conttroller;
   // late JavascriptChannel _toasterJavascriptChannel;
   bool isLoading=true;
   final _key = UniqueKey();

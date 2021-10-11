@@ -4,14 +4,14 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/gestures.dart';
 
 class Delneveshte extends StatefulWidget {
-  const Delneveshte({Key? key}) : super(key: key);
+  const Delneveshte({Key key}) : super(key: key);
 
   @override
   _DelneveshteState createState() => _DelneveshteState();
 }
 
 class _DelneveshteState extends State<Delneveshte> {
-  late WebViewController conttroller;
+  WebViewController conttroller;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
