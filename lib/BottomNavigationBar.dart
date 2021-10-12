@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'MainWebview.dart';
 import 'main.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class BottomNavigator extends StatelessWidget {
   // const BottomNavigator({Key? key}) : super(key: key);
-  late WebViewController _conttroller;
+  WebViewController _conttroller;
 
-  BottomNavigator(this._conttroller);
+  BottomNavigator();
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +42,8 @@ class BottomNavigator extends StatelessWidget {
                     final url = await _conttroller.currentUrl();
                     print('Previous Website: $url');
                     _conttroller.loadUrl('https://khadije.com/delneveshte');
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => WebViewMain()));
                   },
                   child: Icon(Icons.favorite,color: HexColor('5e80c4'),)
               ),
@@ -51,9 +54,14 @@ class BottomNavigator extends StatelessWidget {
                 child: InkWell(
                   onTap: ()  {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => HazratKhadije()));
+                        builder: (context) => WebViewMain()));
                   },
-                  child: Icon(Icons.home_outlined,color: HexColor('5e80c4'),),
+                  child: Column(
+                    children: <Widget>[
+                      Icon(Icons.home_outlined,color: HexColor('5e80c4'),),
+                      Text("صفحه اصلی"),
+                    ],
+                  )
                 )
             ),
           ],

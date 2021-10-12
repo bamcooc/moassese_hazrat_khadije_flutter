@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hazrat_khadije/MainHome.dart';
+import 'MainWebview.dart';
 
 void main() => runApp(MyApp());
 
