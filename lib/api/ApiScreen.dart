@@ -1,17 +1,18 @@
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/cupertino.dart';
-import 'package:hazrat_khadije/product.dart';
+import 'package:hazrat_khadije/model/product.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart' as rootBundle;
-import 'package:hazrat_khadije/MainProduct.dart';
+import 'package:hazrat_khadije/model/MainProduct.dart';
 import 'dart:async';
 import 'dart:core';
+import 'package:hazrat_khadije/MainWebview.dart';
 
-import 'BottomNavigationBar.dart';
-import 'File.dart';
-import 'meta.dart';
+import '../BottomNavigationBar.dart';
+import '../model/File.dart';
+import '../model/meta.dart';
 
 
 class ApiScreen extends StatefulWidget {
@@ -89,7 +90,6 @@ class _ApiScreenState extends State<ApiScreen> {
           );
         },
       ),
-      bottomNavigationBar: BottomNavigator(),
     );
   }
 
