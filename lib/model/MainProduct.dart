@@ -20,12 +20,10 @@ class MainProduct{
       result: resultTemp,
     );
   }
-
   Map<String,dynamic> toJson(){
     return {
       "ok" : ok,
       "result" : result,
     };
   }
-
 }

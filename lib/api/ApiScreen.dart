@@ -9,6 +9,7 @@ import 'package:hazrat_khadije/MainProduct.dart';
 import 'dart:async';
 import 'dart:core';
 
+import 'BottomNavigationBar.dart';
 import 'File.dart';
 import 'meta.dart';
 
@@ -88,6 +89,7 @@ class _ApiScreenState extends State<ApiScreen> {
           );
         },
       ),
+      bottomNavigationBar: BottomNavigator(),
     );
   }
 
