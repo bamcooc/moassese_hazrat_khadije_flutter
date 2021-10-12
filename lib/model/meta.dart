@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hazrat_khadije/Download.dart';
-import 'package:hazrat_khadije/Source.dart';
+import 'package:hazrat_khadije/model/Download.dart';
+import 'package:hazrat_khadije/model/Source.dart';
 
 class Meta{
   Download download;

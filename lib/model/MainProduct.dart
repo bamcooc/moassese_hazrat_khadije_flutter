@@ -1,4 +1,4 @@
-import 'package:hazrat_khadije/product.dart';
+import 'package:hazrat_khadije/model/product.dart';
 
 class MainProduct{
   bool ok;
