@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hazrat_khadije/File.dart';
-import 'package:hazrat_khadije/meta.dart';
+import 'package:hazrat_khadije/model/File.dart';
+import 'package:hazrat_khadije/model/meta.dart';
 
 
 class Product{
